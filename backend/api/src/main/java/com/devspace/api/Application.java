@@ -12,8 +12,6 @@ public class Application {
 		dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
 
 		SpringApplication.run(Application.class, args);
-
-		SpringApplication.run(Application.class, args);
 	}
 
 }
