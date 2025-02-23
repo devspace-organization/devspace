@@ -9,6 +9,11 @@ import lombok.Setter;
 import java.util.Date;
 import java.util.UUID;
 
+enum Role {
+    User,
+    Admin
+}
+
 @Entity
 @Getter
 @Setter
@@ -23,6 +28,8 @@ public class User {
 
     private UUID github_id;
     private String name;
+    private String username;
+    private Enum<Role> role;
     private String email;
     private String password;
 
