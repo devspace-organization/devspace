@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 enum Role {
@@ -29,12 +30,17 @@ public class User {
     private UUID github_id;
     private String name;
     private String username;
-    private Enum<Role> role;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
     private String email;
     private String password;
 
     @Column(name = "avatar_url")
     private String avatarUrl;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Stack> stacks;
 
     @Column(name = "updated_at")
     private Date updatedAt;
