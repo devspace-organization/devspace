@@ -1,4 +1,4 @@
-CREATE TABLE user_tech (
+CREATE TABLE users_techs (
     id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
     user_id UUID NOT NULL,
     tech_id UUID NOT NULL,

@@ -14,8 +14,8 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "stacks")
-public class Stack {
+@Table(name = "user_tech")
+public class UserTech {
 
     @Id
     @GeneratedValue
