@@ -29,6 +29,8 @@ public class UserTech {
     @JoinColumn(name = "tech_id", nullable = false)
     private Tech tech;
 
+    private Integer index;
+
     private String description;
 
     private Date since;
