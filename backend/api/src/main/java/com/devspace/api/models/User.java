@@ -46,5 +46,8 @@ public class User {
     private Date createdAt;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<UserTech> stacks;
+    private List<UserTech> stack;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<UserPath> paths;
 }
