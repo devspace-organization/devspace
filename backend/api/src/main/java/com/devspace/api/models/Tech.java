@@ -30,7 +30,7 @@ public class Tech {
 
     @ManyToMany
     @JoinTable(
-            name = "stacks",
+            name = "users_techs",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "tech_id")
     )
