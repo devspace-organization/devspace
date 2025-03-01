@@ -33,4 +33,5 @@ public class Path {
             inverseJoinColumns = @JoinColumn(name = "path_id")
     )
     private List<Path> paths;
+
 }

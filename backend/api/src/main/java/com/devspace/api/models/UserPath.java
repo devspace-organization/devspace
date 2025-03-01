@@ -16,6 +16,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Table(name = "users_paths")
 public class UserPath {
+
     @Id
     @GeneratedValue
     private UUID id;
