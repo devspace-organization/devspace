@@ -28,7 +28,12 @@ public class Tech {
     @Column(name = "number_of_users")
     private Integer numberOfUsers;
 
-    @OneToMany(mappedBy = "tech", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Stack> users;
+    @ManyToMany
+    @JoinTable(
+            name = "stacks",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "tech_id")
+    )
+    private List<Tech> techs;
 
 }

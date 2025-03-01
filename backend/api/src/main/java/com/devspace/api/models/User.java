@@ -39,12 +39,12 @@ public class User {
     @Column(name = "avatar_url")
     private String avatarUrl;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Stack> stacks;
-
     @Column(name = "updated_at")
     private Date updatedAt;
 
     @Column(name = "created_at")
     private Date createdAt;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<UserTech> stacks;
 }
