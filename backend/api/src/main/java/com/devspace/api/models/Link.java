@@ -23,6 +23,8 @@ public class Link {
     private String title;
     private String url;
 
+    private Integer index;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
