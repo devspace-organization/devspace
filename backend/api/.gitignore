@@ -42,3 +42,4 @@ target/
 
 # Files
 HELP.md
+.env
